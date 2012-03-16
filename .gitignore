@@ -4,3 +4,5 @@ parts
 develop-eggs
 *.egg-info
 *.pyc
+.installed.cfg
+.mr.developer.cfg
