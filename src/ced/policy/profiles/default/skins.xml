@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+
+ <object name="ced_policy_skin_elements"
+    meta_type="Filesystem Directory View"
+    directory="ced.policy:skins/ced_policy_skin_elements"/>
+ 
+ <skin-path name="crisewing.com Theme" based-on="Sunburst Theme">
+ </skin-path>
+ 
+ <skin-path name="crisewing.com Theme">
+  <layer name="ced_policy_skin_elements"
+     insert-after="custom"/>
+ </skin-path>
+
+</object>
