@@ -1,0 +1,25 @@
+div#viewlet-below-content dt.portletHeader,
+div#portal-footer {
+    border: 1px solid #4a3c31;
+    background-color: #e3e2cd;
+    color: #4a3c31;
+    moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+div#viewlet-below-content dt.portletHeader a,
+div#viewlet-below-content dt.portletHeader a:visited {
+    color: #4a3c31;
+}
+
+div#portal-footer a#license-img {
+    float: right;
+}
+
+div.feedEntry {
+    padding: 1em 1.5em 2em;
+    border-bottom: 1px solid #ddd;
+}
+div.feedEntry h2 {
+    margin-left: -0.75em;
+}
