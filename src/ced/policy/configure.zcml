@@ -5,8 +5,13 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="ced.policy">
 
-  <five:registerPackage package="." initialize=".initialize" />
+
+  <includePlugins package="." />
+  <includeDependencies package="." />
   <include file="skins.zcml" />
+  <include package=".browser" />
+
+  <five:registerPackage package="." initialize=".initialize" />
 
   <genericsetup:registerProfile
       name="default"
@@ -15,6 +20,23 @@
       description="Installs the ced.policy package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  <!-- -*- extra stuff goes here -*- -->
-  
+
+
+  <genericsetup:importStep
+      name="ced.policy: default"
+      title="ced.policy: Various steps"
+      description="Setup handlers for ced.policy"
+      handler="ced.policy.setuphandlers.importVarious">
+    <depends name="content"/>
+  </genericsetup:importStep>
+
+  <genericsetup:upgradeStep
+      title="ced.policy: Install Discussion"
+      description="set up plone.app.discussion"
+      source="*"
+      destination="001"
+      handler="ced.policy.upgrades.install_discussion"
+      sortkey="10"
+      profile="ced.policy:default"/>
+
 </configure>
