@@ -35,10 +35,14 @@ setup(name='ced.policy',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
+          # -*- Extra requirements: -*- #
+          'sixfeetup.utils',
           'Products.Collage',
           'Products.ContentWellPortlets',
           'Products.PloneFormGen',
+          'collective.blog.star',
+          'collective.portlet.feedmixer',
+          'z3c.jbot',
       ],
       extras_require={'test': ['plone.app.testing']},
       entry_points="""
