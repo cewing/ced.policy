@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<object name="portal_skins">
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="crisewing.com Theme">
 
  <object name="ced_policy_skin_elements"
     meta_type="Filesystem Directory View"
